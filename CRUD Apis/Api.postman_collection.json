@@ -1,0 +1,437 @@
+{
+  "info": {
+    "_postman_id": "b33c7c1d-b8a7-4329-a6b1-62668c83218d",
+    "name": "Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "47474141",
+    "_collection_link": "https://go.postman.co/collection/47474141-b33c7c1d-b8a7-4329-a6b1-62668c83218d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "CRUD API",
+      "item": [
+        {
+          "name": "Create Task",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"Fairy Tales\",\r\n    \"description\":\"Reviewing fairy tales\",\r\n    \"completed\":false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Task",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\":\"Learn Node js\",\r\n    \"description\":\"Build the server side logic\",\r\n    \"completed\":false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/tasks/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "tasks",
+                    ""
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "206"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"ce-rofygzjGEEi2l/Q9OrCdq4UOz5U\""
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 26 Sep 2026 05:23:16 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"title\": \"Learn Node js\",\n  \"description\": \"Build the server side logic\",\n  \"completed\": false,\n  \"_id\": \"6ab756c4054af0ffd8a88836\",\n  \"createdAt\": \"2026-09-26T05:23:16.068Z\",\n  \"updatedAt\": \"2026-09-26T05:23:16.068Z\",\n  \"__v\": 0\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get All Tasks",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                ""
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get All Tasks",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/tasks/",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "tasks",
+                    ""
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "981"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"3d5-sSLwBXmZkYyzi205QQrZAn2aD/g\""
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 26 Sep 2026 05:23:37 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n  {\n    \"_id\": \"6ab75442ac5e6b36b40bcca0\",\n    \"title\": \"Fairy Tales\",\n    \"description\": \"Reviewing fairy tales\",\n    \"completed\": false,\n    \"createdAt\": \"2026-09-26T05:12:34.705Z\",\n    \"updatedAt\": \"2026-09-26T05:12:34.705Z\",\n    \"__v\": 0\n  },\n  {\n    \"_id\": \"6ab75650054af0ffd8a88833\",\n    \"title\": \"Learn CSS\",\n    \"description\": \"Learn the styles\",\n    \"completed\": false,\n    \"createdAt\": \"2026-09-26T05:21:20.356Z\",\n    \"updatedAt\": \"2026-09-26T05:21:20.356Z\",\n    \"__v\": 0\n  },\n  {\n    \"_id\": \"6ab75667054af0ffd8a88834\",\n    \"title\": \"Learn JS\",\n    \"description\": \"Learn the JAvascript\",\n    \"completed\": true,\n    \"createdAt\": \"2026-09-26T05:21:43.357Z\",\n    \"updatedAt\": \"2026-09-26T05:21:43.357Z\",\n    \"__v\": 0\n  },\n  {\n    \"_id\": \"6ab7568c054af0ffd8a88835\",\n    \"title\": \"Crud api\",\n    \"description\": \"Build the api\",\n    \"completed\": false,\n    \"createdAt\": \"2026-09-26T05:22:20.934Z\",\n    \"updatedAt\": \"2026-09-26T05:22:20.934Z\",\n    \"__v\": 0\n  },\n  {\n    \"_id\": \"6ab756c4054af0ffd8a88836\",\n    \"title\": \"Learn Node js\",\n    \"description\": \"Build the server side logic\",\n    \"completed\": false,\n    \"createdAt\": \"2026-09-26T05:23:16.068Z\",\n    \"updatedAt\": \"2026-09-26T05:23:16.068Z\",\n    \"__v\": 0\n  }\n]"
+            }
+          ]
+        },
+        {
+          "name": "Get Task by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Task by ID",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/tasks/6ab75667054af0ffd8a88834",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "tasks",
+                    "6ab75667054af0ffd8a88834"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "193"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"c1-ZkkcycltYI1CyQDMIPn1Iug1aUE\""
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 26 Sep 2026 05:24:03 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"_id\": \"6ab75667054af0ffd8a88834\",\n  \"title\": \"Learn JS\",\n  \"description\": \"Learn the JAvascript\",\n  \"completed\": true,\n  \"createdAt\": \"2026-09-26T05:21:43.357Z\",\n  \"updatedAt\": \"2026-09-26T05:21:43.357Z\",\n  \"__v\": 0\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Task",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"Learn C\",\r\n    \"description\":\"Learnig progrsming languages\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Task",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"title\":\"Learn C\",\n    \"description\":\"Learnig progrsming languages\",\n    \"completed\":false\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/api/tasks/6ab75650054af0ffd8a88833",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "tasks",
+                    "6ab75650054af0ffd8a88833"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "33"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"21-NsabHw0dKZQhHGEDsBRTGnTDRgQ\""
+                },
+                {
+                  "key": "date",
+                  "value": "Sat, 26 Sep 2026 05:28:03 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Updated Succusfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Task",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/tasks/3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "tasks",
+                "3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Task",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/api/tasks/5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "api",
+                    "tasks",
+                    "5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "x-powered-by",
+                  "value": "Express"
+                },
+                {
+                  "key": "content-type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "content-length",
+                  "value": "34"
+                },
+                {
+                  "key": "etag",
+                  "value": "W/\"22-cHBYDJOl3EslAEZXPx3KZ+alErY\""
+                },
+                {
+                  "key": "date",
+                  "value": "Fri, 25 Sep 2026 15:09:49 GMT"
+                },
+                {
+                  "key": "connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "keep-alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n  \"message\": \"Deleted Succusefully\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
